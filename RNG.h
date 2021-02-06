@@ -2,7 +2,7 @@
 #include <chrono>
 #include <random>
 
-unsigned long int* RNG(unsigned int nos = 10, int min = 0, int max = 1000) {
+unsigned int* RNG(unsigned int nos = 10, int min = 0, int max = 1000) {
 
     std::random_device rd;
 
@@ -19,9 +19,9 @@ unsigned long int* RNG(unsigned int nos = 10, int min = 0, int max = 1000) {
     std::mt19937 gen(seed);
     std::uniform_int_distribution<unsigned> distrib(min, max);
 
-    auto *arr = new unsigned long int[nos];
+    auto *arr = new unsigned int[nos];
 
-    for (unsigned long j = 0; j < nos; ++j)
+    for (unsigned int j = 0; j < nos; ++j)
     {
         arr[j] = distrib(gen);
     }
@@ -30,7 +30,7 @@ unsigned long int* RNG(unsigned int nos = 10, int min = 0, int max = 1000) {
     return arr;
 }
 
-unsigned long int RNG_s(int min = 0, int max = 1000) {
+unsigned int RNG_s(int min = 0, int max = 1000) {
 
     std::random_device rd;
 
